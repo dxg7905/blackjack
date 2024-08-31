@@ -31,7 +31,7 @@ const Hero = () => {
           <h1 className="hero-title text-7xl font-bold">BLACK JACK</h1>
 
           <motion.a
-            href="#"
+            href="game"
             className="mt-6 inline-block bg-red-600 hover:bg-red-800 text-white py-6 px-12 rounded-full text-2xl font-bold"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
