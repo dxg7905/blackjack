@@ -1,0 +1,41 @@
+h1 {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #256314, #fff, #256314);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+h1::before {
+  content: "BLACK JACK"; /* Same text content for the overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: inherit; /* Match the font size */
+  letter-spacing: inherit; /* Match letter spacing */
+  color: black;
+  opacity: 0.2; /* Adjust for transparency */
+  z-index: -1;
+  background: inherit; /* Use the same gradient background */
+  background-size: inherit; /* Match the animation size */
+  animation: inherit; /* Match the animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.1); /* Slightly different opacity */
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
